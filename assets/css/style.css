@@ -1,0 +1,332 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+/*Front only*/
+body{
+    background-color: var(--gris );
+    -webkit-box-shadow: -15px 0px 15px -8px rgba(0,0,0,0.4), 15px 0px 15px -8px rgba(0,0,0,0.4), 15px 0px 15px -8px rgba(0,0,0,0.4);
+    box-shadow: -15px 0px 15px -8px rgba(0,0,0,0.4), 15px 0px 15px -8px rgba(0,0,0,0.4), 15px 0px 15px -8px rgba(0,0,0,0.4);
+}
+
+/* LOGIN */
+
+.error {
+    color: var(--rouge);
+}
+
+.success {
+    color: #479c56;
+}
+/* Header*/
+#header{
+    position: sticky;
+    top: 0;
+    /*background-color: var(--gris);*/
+    background: -webkit-gradient(linear , left top, left bottom , from(var(--gris)) , to(rgba(196, 196, 196, 0)));
+    background: -o-linear-gradient(var(--gris) , rgba(196, 196, 196, 0));
+    background: linear-gradient(var(--gris) , rgba(196, 196, 196, 0));
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    padding: .5rem max(1rem, 1.5rem + 3vw);
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+#header>*{
+    padding: 10px;
+}
+
+#header .site_name{
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    -webkit-box-flex: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2;
+}
+
+#header  .logo{
+    width: 50px;
+    vertical-align: middle;
+}
+
+#header  p{
+    color: white;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-weight: 300;
+    font-size: 1.1rem;
+    background-color: var(--rouge);
+    border-radius: 15px;
+    border: solid 2px #ffffff;
+    cursor: pointer;
+    -webkit-transition: all .25s;
+    -o-transition: all .25s;
+    transition: all .25s;
+    padding: .5rem 1.2rem;
+}
+#header p:hover{
+    color: var(--gris);
+    background-color: var(--selected-item-color);
+    -webkit-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03);
+}
+
+
+/*
+INDEX  PHP
+*/
+
+/* HERO banner Paralax*/
+#hero-banner{
+    background: url("../img/background.png")  no-repeat center/cover fixed;
+    min-height: 60vh;
+    padding: max(1.5rem,  5vw);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+#hero-banner #box-hero{
+    color: white;
+}
+#hero-banner #box-hero>*{
+    margin-bottom: .6rem;
+}
+#hero-banner #box-hero h2{
+    font-size: clamp(1.8rem, 2rem + 3vw , 3rem);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+#hero-banner #box-hero p:not(#btn-login){
+    font-size: clamp(1.2rem, 1.2rem + 1.5vw , 1.8rem);
+}
+#hero-banner #box-hero #btn-login{
+    background-color: var(--rouge);
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-transition: all .25s;
+    -o-transition: all .25s;
+    transition: all .25s;
+    padding: .5rem 1.2rem;
+    font-size: 1rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+#hero-banner #box-hero #btn-login:hover{
+    -webkit-box-shadow: inset  0 3px 10px var(--back-color);
+    box-shadow: inset  0 3px 10px var(--back-color);
+    background-color: var(--selected-item-color);
+    color: var(--rouge);
+}
+
+/* Functionality*/
+#functionality{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: var(--back-color);
+    color: white;
+    padding: max(1rem, 3vw);
+    gap: 2%;
+}
+#functionality h2{
+    font-size: clamp(1rem, 1.5rem + 3vw , 3rem);
+    margin-bottom: .8rem;
+}
+#functionality > div{
+    width: clamp(300px, 100%, 700px);
+}
+#functionality ul{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    gap: .5rem;
+}
+#functionality ul li p {
+    font-size: clamp(.6rem, .6rem + 2vw, 1.1rem);
+    display: inline;
+}
+#functionality ul li i{
+    margin-right: 1rem;
+}
+
+/* Analyse */
+#analyse{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-flow: row-reverse nowrap;
+    flex-flow: row-reverse nowrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: max(1rem, 3vw);
+    gap: 2%;
+}
+#analyse h2{
+    font-size: clamp(1rem, 1.5rem + 3vw , 3rem);
+    margin-bottom: .8rem;
+}
+#analyse > div{
+    width: clamp(300px, 100%, 700px);
+}
+#analyse ul{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    gap: .5rem;
+}
+#analyse ul li p {
+    font-size: clamp(.6rem, .6rem + 2vw, 1.1rem);
+    display: inline;
+}
+#analyse ul li i{
+    margin-right: 1rem;
+}
+
+
+/*Mentions légales*/
+#mentionslegales{
+    width: 95%;
+    margin-inline: auto;
+    margin-bottom: 1rem;
+}
+
+#mentionslegales h2, #mentionslegales h3 {
+    font-size: clamp(1rem, 1rem + 3vw, 2rem);
+    text-align: center;
+    padding: max(.5rem, .5rem + 3vw);
+}
+#mentionslegales h3{
+    text-decoration: underline;
+}
+#mentionslegales p {
+    font-size: clamp(.6rem, .6rem + 2vw, 1.1rem);
+    text-align: justify;
+}
+
+
+/*****************************LOST PASSWORD ********************/
+/* Request PWD And Recup PWD */
+#lost-pwd , #lost-token{
+    width: min(95%, 600px);
+    margin: 10% auto 0 auto;
+    text-align: center;
+}
+#lost-pwd form, #lost-token form{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+#lost-pwd form > *, #lost-token form > *{
+    margin-bottom: 1rem;
+}
+#lost-pwd form input,
+#lost-token form input{
+    padding: 1rem;
+    width: 100%;
+    border-radius: .3rem;
+}
+#lost-pwd form .input_email,
+#lost-token form .input_email{
+    border: solid 1px var(--gris);
+}
+#lost-pwd form .submit ,
+#lost-token form .submit {
+    border: solid 2px var(--rouge) ;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 1.2rem;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+#lost-pwd form .submit:hover,
+#lost-token form .submit:hover {
+    background-color: var(--rouge);
+    color: white;
+}
+#lost-pwd #token{
+    width: 90%;
+    margin: 1rem auto 0 auto;
+    border-radius: .3rem;
+    border: solid 2px var(--rouge);
+    padding: .3rem;
+    cursor: pointer;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+#lost-pwd #token p{
+    word-break: break-all;
+}
+#lost-pwd #token:hover{
+    background-color: var(--selected-item-color);
+}
+#lost-pwd #token:hover a{
+    color: var(--rouge);
+}
+
+
+
+/*About-us*/
+#abouts-us{
+    padding: max(1rem, 3vw);
+    margin-bottom: 1rem;
+}
+
+#abouts-us h2{
+    margin: 1rem auto;
+    font-size: clamp(.7rem, .7rem + 2vw, 1.2rem);
+}
+#abouts-us p{
+    font-size: clamp(.6rem, .6rem + 2vw, 1.1rem);
+}
